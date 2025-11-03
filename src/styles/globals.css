@@ -1,5 +1,50 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+
+  --color-grey: #D8D8D8;
+  --color-grey-100: #C3CBCD;
+  --color-grey-300: #F3F3F9;
+  --color-grey-500: #B7B7B7;
+  --color-grey-600: #C4C4C4;
+  --color-grey-900: #74788D;
+
+  --color-blue: #308EE1;
+  --color-blue-100: #E2F5FF;
+  --color-blue-300: #43A5D8;
+  --color-blue-500: #3BA8F6;
+  --color-blue-600: #0095FF;
+
+  --color-orange: #EA9F0D;
+
+  --color-turquois: #4AB58E;
+  --color-turquios-100: #E2FFFD;
+  --color-turquios-300: #5CD3CC;
+  --color-turquios-500: #05C283;
+
+  --color-pink: #DD53A4;
+  --color-pink-100: #FFE2F3;
+
+  --color-purple: #CD7FE9;
+
+  --color-green: #8CCE39;
+  --color-green-100: #F0FBE2;
+  --color-green-500: #05C283;
+
+  --color-red: #F46A6A;
+
+  --color-white-500: #FBFBFB;
+  --color-black: #0F0F0F;
+  --color-black-500: #373F41;
+}
+
+@utility bg-primary-gradient {
+  background-image: linear-gradient(90deg, #009DF5, #3CC4FF);
+}
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -24,12 +69,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 a {
