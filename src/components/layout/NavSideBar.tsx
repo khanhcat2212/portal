@@ -8,7 +8,7 @@ const NavSideBar: React.FC = () => {
   return (
     <div
       className="w-63 bg-black-600"
-      style={{ height: "calc(100vh - 4.375rem)" }}
+      // style={{ height: "calc(100vh - 4.375rem)" }}
     >
       {adminNavs.map((nav) => {
         const isActive = activePath === nav.path;
