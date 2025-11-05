@@ -321,14 +321,4 @@ export const orders = [
     total: "180000",
     createdAt: "02/04/2022 04:20 PM",
   },
-  {
-    id: "DH033",
-    customer: "Mai Hoàng Uyên",
-    name: "Gấu bông lớn",
-    status: "Đã tạo",
-    checkout: "Thanh toán một phần",
-    channel: "Tiki", 
-    total: "390000",
-    createdAt: "03/04/2022 08:30 AM",
-  },
 ];

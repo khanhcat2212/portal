@@ -126,7 +126,7 @@ const RevenueChart: React.FC = () => {
   };
 
   return (
-    <div className="bg-white rounded-md p-6 shadow-md w-full">
+    <div className="bg-white rounded-md p-6 w-full">
       <div className="flex justify-between items-center mb-4">
         <RevenueCartController onDownload={handleDownload}/>
       </div>

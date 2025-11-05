@@ -1,9 +1,14 @@
 import { adminNavs } from "@src/constants/adminNavs";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const NavSideBar: React.FC = () => {
+  const router = useRouter()
   const [activePath, setActivePath] = useState<string | null>("/admin");
-  const handleClick = (path: string) => setActivePath(path);
+  const handleClick = (path: string) => {
+    router.push(path)
+    setActivePath(path)
+  };
 
   return (
     <div

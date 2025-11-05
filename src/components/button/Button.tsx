@@ -18,7 +18,7 @@ function Button({
   ...props
 }: ButtonProps) {
   const base =
-    "flex items-center justify-center font-medium hover:scale-[1.03] transition-all";
+    "flex items-center justify-center font-medium hover:scale-[1.03] transition-all whitespace-nowrap";
 
   const sizes: Record<Size, string> = {
     sm: "rounded-sm px-5 py-2 text-[.8125rem]",

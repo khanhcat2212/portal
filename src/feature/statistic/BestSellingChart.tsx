@@ -72,7 +72,7 @@ const BestSellingChart: React.FC = () => {
   }, []);
 
   return (
-    <div className="p-6 bg-white rounded-md shadow-md">
+    <div className="p-6 bg-white rounded-md">
       <div className="flex items-center justify-between w-full mb-4">
         <p className="text-[18px] font-semibold">Top sản phẩm bán chạy</p>
 
