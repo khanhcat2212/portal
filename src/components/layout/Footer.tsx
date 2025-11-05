@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Footer() {
+const Footer: React.FC = () => {
   return (
     <div className='w-screen h-34.5 flex items-center justify-center bg-grey-800'>
         <p className='text-[14px] text-grey-200'>

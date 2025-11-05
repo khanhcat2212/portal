@@ -1,8 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import styles from "@src/styles/Home.module.css";
-import Button from "@src/components/button/Button";
-import Header from "@src/components/layout/Header";
 import LandingPageLayout from "@src/layout/landingPageLayout";
+import Overview from "@src/feature/landingPage/Overview";
+import Features from "@src/feature/landingPage/Features";
+import Managements from "@src/feature/landingPage/Managements";
+import Customers from "@src/feature/landingPage/Customers";
+import QA from "@src/feature/landingPage/QA";
+import Appeal from "@src/feature/landingPage/Appeal";
 
 
 const geistSans = Geist({
@@ -18,17 +21,19 @@ const geistMono = Geist_Mono({
 export default function Home() {
   return (
     <LandingPageLayout>
-      <section id="overview" className="h-30 bg-red-100">
-        Tổng quan
+      <section id="overview">
+        <Overview />
       </section>
-      <section id="features" className="h-30 bg-blue-100">
-        Tính năng
+      <section id="features">
+        <Features />
       </section>
-      <section id="pricing" className="h-30 bg-green-100">
-        Bảng giá
+      <section id="pricing">
+        <Managements />
       </section>
-      <section id="customer" className="h-30 bg-yellow-100">
-        Khách hàng
+      <section id="customer">
+        <Customers />
+        <QA />
+        <Appeal />
       </section>
     </LandingPageLayout>
   );

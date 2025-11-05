@@ -2,7 +2,7 @@ import AdminLayout from "@src/layout/adminLayout";
 
 import React from 'react'
 
-function index() {
+const Admin: React.FC = () => {
   return (
     <AdminLayout>
       haha
@@ -10,4 +10,4 @@ function index() {
   )
 }
 
-export default index
+export default Admin

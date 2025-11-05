@@ -1,6 +1,6 @@
 import type { Meta, Story } from "@ladle/react";
 import "@src/styles/globals.css";
-import ManagementCard from "@src/components/card/MangementCard";
+import ManagementCard from "@src/components/card/ManagementCard";
 
 const meta: Meta = {
   title: "card/ManagementCard",

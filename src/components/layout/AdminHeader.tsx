@@ -1,8 +1,8 @@
 import { ChevronDown, Menu, Settings } from "lucide-react";
 import React from "react";
-import Input from "../input/Input";
+import Input from "@src/components/input/Input";
 
-function AdminHeader() {
+const AdminHeader: React.FC = () => {
   return (
     <div className="h-17.5 flex w-screen">
       <div className="w-63 bg-black-600 flex items-center justify-center">

@@ -1,7 +1,7 @@
 import { adminNavs } from "@src/constants/adminNavs";
 import React, { useState } from "react";
 
-function NavSideBar() {
+const NavSideBar: React.FC = () => {
   const [activePath, setActivePath] = useState<string | null>("/admin");
   const handleClick = (path: string) => setActivePath(path);
 

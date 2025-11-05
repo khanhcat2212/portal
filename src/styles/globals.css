@@ -8,6 +8,7 @@
   --color-grey-100: #C3CBCD;
   --color-grey-200: #E0E0E0;
   --color-grey-300: #F3F3F9;
+  --color-grey-400: #FCFCFC;
   --color-grey-500: #B7B7B7;
   --color-grey-600: #C4C4C4;
   --color-grey-800: #484848;
@@ -40,8 +41,10 @@
   --color-white-300: #F8F8FB;
   --color-white-500: #FBFBFB;
   --color-black: #0F0F0F;
+  --color-black-300: #303133;
   --color-black-500: #373F41;
   --color-black-600: #2A3042;
+  --color-black-800: #222;
 }
 
 @utility bg-primary-gradient {

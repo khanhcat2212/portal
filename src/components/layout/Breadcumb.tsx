@@ -4,7 +4,7 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import { adminNavs } from "@src/constants/adminNavs";
 
-const Breadcumb = () => {
+const Breadcumb: React.FC = () => {
   const pathname = usePathname();
 
   const currentNav = adminNavs.find((nav) => nav.path === pathname);

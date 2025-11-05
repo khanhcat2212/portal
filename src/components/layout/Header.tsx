@@ -1,9 +1,9 @@
 import { landingPageNavs } from "@src/constants/landingPageNavs";
 import React, { useRef, useState } from "react";
-import Button from "../button/Button";
+import Button from "@src/components/button/Button";
 import { Menu } from "lucide-react";
 
-function Header() {
+const Header: React.FC = () => {
   const [activeRef, setActiveRef] = useState<string>("overview");
   const [menuOpen, setMenuOpen] = useState(false);
 
