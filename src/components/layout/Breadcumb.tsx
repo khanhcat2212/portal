@@ -2,12 +2,12 @@
 
 import React from "react";
 import { usePathname } from "next/navigation";
-import { adminNavs } from "@src/constants/adminNavs";
+import { adminRoutes } from "@src/constants/adminRoutes";
 
 const Breadcumb: React.FC = () => {
   const pathname = usePathname();
 
-  const currentNav = adminNavs.find((nav) => nav.path === pathname);
+  const currentNav = adminRoutes.find((nav) => nav.path === pathname);
 
   return (
     <div className="flex items-center justify-between w-full pb-5">

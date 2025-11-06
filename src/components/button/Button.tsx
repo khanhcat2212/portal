@@ -30,7 +30,7 @@ function Button({
   const variants: Record<Variant, string> = {
     primary: "bg-primary-gradient text-white font-semibold cursor-pointer",
     outline: "border-2 border-blue-500 text-blue-500 hover:bg-blue-100 font-semibold cursor-pointer",
-    dash: "border-1 border-dashed border-blue-500 text-blue-500 hover:bg-blue-100 text-[.875rem] cursor-pointer",
+    dash: "border-1 border-dashed border-blue-500 text-blue-500 hover:bg-blue-100 text-[.875rem] cursor-pointer bg-white text-semibold",
     neutral: "px-7 bg-grey text-black hover:bg-grey-100 cursor-pointer",
   };
 

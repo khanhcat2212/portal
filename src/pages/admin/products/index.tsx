@@ -8,6 +8,7 @@ import FilterPopup from "@src/feature/products/FIlterPopup";
 import AdminLayout from "@src/layout/adminLayout";
 import { isWithinPeriod, normalizeString } from "@src/utils/parseData";
 import { ChevronDown, Filter, Plus } from "lucide-react";
+import { useRouter } from "next/navigation";
 import React, { useEffect, useMemo, useState } from "react";
 
 type ProductField = "status" | "createdAt";
@@ -27,6 +28,8 @@ const Products: React.FC = () => {
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 3;
+
+  const router = useRouter()
 
   const addFilter = () => {
     if (!selectedValue) return;
@@ -77,28 +80,6 @@ const Products: React.FC = () => {
   }, [keyword, activeFilters]);
 
   useEffect(() => setCurrentPage(1), [keyword]);
-
-  //   React.useEffect(() => {
-  //     const firstValue = productFilterOptions[selectedField][0];
-  //     setSelectedValue(firstValue);
-  //   }, [selectedField]);
-
-  React.useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        filterPopupRef.current &&
-        !filterPopupRef.current.contains(event.target as Node)
-      ) {
-        setIsOpenFilter(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
 
   useEffect(() => {
     if (isOpenFilter) {
@@ -163,7 +144,7 @@ const Products: React.FC = () => {
             )}
           </div>
 
-          <Button variant="primary" size="sm" className="w-33.5">
+          <Button onClick={() => router.push('/admin/products/create')} variant="primary" size="sm" className="w-33.5">
             <div className="flex items-center gap-1">
               <Plus size={16} className="text-white" />
               <span className="text-white text-[.8125rem]">Tạo sản phẩm</span>

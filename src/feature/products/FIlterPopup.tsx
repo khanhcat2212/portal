@@ -23,7 +23,7 @@ const FilterPopup: React.FC<FilterPopupProps> = ({
   const stopPropagation = (e: React.MouseEvent) => e.stopPropagation();
 
   return (
-    <div onClick={stopPropagation} className="absolute right-0 top-12 w-[316px] h-[260px] rounded-md shadow-xs bg-white text-[14px] text-black-300 p-8 flex flex-col justify-center">
+    <div onClick={stopPropagation} className="absolute right-0 top-12 w-79 h-65 rounded-md shadow-xs bg-white text-[.875rem] text-black-300 p-8 flex flex-col justify-center">
       <p>Hiển thị tất cả đơn hàng theo:</p>
       <div className="relative h-10 my-2 flex items-center">
         <select

@@ -8,7 +8,7 @@ interface Props {
 
 const ActiveFilterBadge: React.FC<Props> = ({ filter, onRemove }) => {
   return (
-    <div className="w-fit rounded-sm bg-grey-300 p-2 text-[12px] text-grey-800 flex items-center justify-between gap-4">
+    <div className="w-fit rounded-sm bg-grey-300 p-2 text-[.75rem] text-grey-800 flex items-center justify-between gap-4">
       {`${filter.field === "status" ? "Tình trạng sản phẩm" : "Ngày tạo"}: ${filter.value}`}
       <div
         onClick={onRemove}

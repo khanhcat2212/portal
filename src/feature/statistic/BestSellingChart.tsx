@@ -74,7 +74,7 @@ const BestSellingChart: React.FC = () => {
   return (
     <div className="p-6 bg-white rounded-md">
       <div className="flex items-center justify-between w-full mb-4">
-        <p className="text-[18px] font-semibold">Top sản phẩm bán chạy</p>
+        <p className="text-[1.125rem] font-semibold">Top sản phẩm bán chạy</p>
 
         <div className="flex items-center justify-between w-31.5 h-9 px-4 bg-white-400 rounded-md border border-grey-600">
           <span className="text-[.8125rem]">Tháng</span>
@@ -82,7 +82,7 @@ const BestSellingChart: React.FC = () => {
         </div>
       </div>
 
-      <div ref={chartRef} className="w-full h-[220px]" />
+      <div ref={chartRef} className="w-full h-55" />
 
       <div className="grid grid-cols-3 mt-8">
         {summary.map((item, idx) => (
