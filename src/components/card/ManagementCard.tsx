@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface ManagementCardProps {
@@ -13,9 +14,11 @@ const ManagementCard: React.FC<ManagementCardProps> = ({
 }) => {
   return (
     <div className="h-33.5 w-63.75 hover:scale-[1.1] transition-transform duration-300 ease-in-out cursor-pointer">
-        <img
+        <Image
           src={image}
           alt={title}
+          width={48}
+          height={48}
           className="w-12 h-12 object-cover mb-2"
         />
 

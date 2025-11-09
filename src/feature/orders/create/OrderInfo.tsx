@@ -1,10 +1,21 @@
 import Input from "@src/components/input/Input";
 import { ChevronDown } from "lucide-react";
-import React, { useState } from "react";
+import React from "react";
 
-const OrderInfo = () => {
-  const [channel, setChannel] = useState("");
-  const [shop, setShop] = useState("");
+interface Props {
+  id: string;
+  channel: string;
+  shopName: string;
+  orderNote: string;
+  onChange: (newValue: {
+    id: string;
+    channel: string;
+    shopName: string;
+    orderNote: string;
+  }) => void;
+}
+
+const OrderInfo: React.FC<Props> = ({ id, channel, shopName, orderNote, onChange }) => {
   return (
     <div className="w-full bg-white rounded-md p-8">
       <p className="text-[1.125rem] font-bold mb-6 text-black-300">
@@ -15,7 +26,7 @@ const OrderInfo = () => {
         <div className="text-[.875rem] whitespace-nowrap font-semibold w-25 flex-none">
           Mã đơn hàng
         </div>
-        <Input variant="form" />
+        <Input value={id} variant="form" onChange={(e) => onChange({ id: e.target.value, channel, shopName, orderNote })} />
       </div>
 
       <div className="flex w-full items-center gap-16 justify-between py-2">
@@ -25,7 +36,7 @@ const OrderInfo = () => {
         <div className="relative w-full">
           <select
             value={channel}
-            onChange={(e) => setChannel(e.target.value)}
+            onChange={(e) => onChange({ id, channel: e.target.value, shopName, orderNote })}
             className="w-full appearance-none border border-grey-600 rounded-md px-3 py-2 text-[.875rem] bg-gray-50 leading-6"
           >
             <option value="shopee">Shopee</option>
@@ -45,8 +56,8 @@ const OrderInfo = () => {
         </div>
         <div className="relative w-full">
           <select
-            value={shop}
-            onChange={(e) => setShop(e.target.value)}
+            value={shopName}
+            onChange={(e) => onChange({ id, channel, shopName: e.target.value, orderNote })}
             className="w-full appearance-none border border-grey-600 rounded-md px-3 py-2 text-[.875rem] bg-gray-50 leading-6"
           >
             <option value="cosmetic">Cửa hàng Mỹ phẩm</option>
@@ -64,7 +75,19 @@ const OrderInfo = () => {
         <div className="text-[.875rem] mt-2 whitespace-nowrap font-semibold w-25 flex-none">
           Ghi chú đơn hàng
         </div>
-        <textarea className="border border-grey-500 rounded-lg bg-grey-400 w-full h-25 text-[14px] px-4 py-2" placeholder="Thêm ghi chú" />
+        <textarea 
+        value={orderNote}
+        onChange={(e) =>
+          onChange({
+            id,
+            channel,
+            shopName,
+            orderNote: e.target.value,
+          })
+        }
+        className="border border-grey-500 rounded-lg bg-grey-400 w-full h-25 text-[14px] px-4 py-2" 
+        placeholder="Thêm ghi chú" 
+        />
       </div>
     </div>
   );

@@ -1,25 +1,38 @@
-import React, { useState } from "react";
-import { cart as initialItems } from "@src/constants/cart";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "@src/store/store";
+import { fetchCart, removeFromCart, updateCartQuantity } from "@src/store/slices/cartThunks";
+import { useRouter } from "next/navigation";
+
+const uid = "1234";
 
 const Cart: React.FC = () => {
-  const [items, setItems] = useState(initialItems);
+  const dispatch = useDispatch<AppDispatch>();
+  const { items, loading } = useSelector((state: RootState) => state.carts);
+  const router = useRouter()
+
+  useEffect(() => {
+    dispatch(fetchCart(uid));
+  }, [dispatch]);
 
   const handleQuantityChange = (id: string, value: number) => {
-    setItems((prev) =>
-      prev.map((item) =>
-        item.id === id ? { ...item, quantity: Math.max(1, value) } : item
-      )
-    );
+    const newValue = Math.max(1, value);
+    dispatch(updateCartQuantity({ itemId: id, quantity: newValue }));
   };
 
   const handleRemove = (id: string) => {
-    setItems((prev) => prev.filter((item) => item.id !== id));
+    dispatch(removeFromCart({ itemId: id }));
   };
 
   const total = items.reduce(
-    (sum, item) => sum + item.quantity * item.price,
+    (sum, item) =>
+      sum + item.quantity * (item.product.variants[0].price || 0),
     0
   );
+
+  if (loading) {
+    return <div className="p-8 text-gray-600">Đang tải giỏ hàng...</div>;
+  }
 
   return (
     <div className="bg-white rounded-md p-8">
@@ -31,32 +44,40 @@ const Cart: React.FC = () => {
             <th className="text-left py-4 px-4">Mã</th>
             <th className="text-left py-4 px-4">Tên sản phẩm</th>
             <th className="text-center py-4 px-4 w-24">Số lượng</th>
-            <th className="text-right py-4 px-4 w-28">Đơn giá</th>
-            <th className="text-right py-4 px-4 w-28">Thành tiền</th>
+            <th className="text-center py-4 px-4 w-28">Đơn giá</th>
+            <th className="text-left py-4 px-4 w-28">Thành tiền</th>
             <th className="w-6"></th>
           </tr>
         </thead>
         <tbody>
           {items.map((item) => (
             <tr key={item.id} className="border-b border-gray-100">
-              <td className="py-3 px-4">{item.sku}</td>
-              <td className="py-3 px-4 text-gray-700">{item.name}</td>
+              <td className="py-3 px-4">{item.product.variants[0].sku}</td>
+              <td className="py-3 px-4 text-gray-700"> {item.product.name} - {item.product.variants[0].productName}</td>
               <td className="py-3 px-4 text-center">
                 <input
-                  type="number"
+                  type="text"
                   min={1}
                   value={item.quantity}
                   onChange={(e) =>
                     handleQuantityChange(item.id, Number(e.target.value))
                   }
-                  className="w-12 text-center border rounded-md py-1"
+                  className="w-13 h-8 text-center border border-grey-200 rounded-md py-1"
                 />
               </td>
-              <td className="py-3 px-4 text-right">
-                {item.price.toLocaleString("vi-VN")}
+              <td className="py-3 px-4 text-center">
+                <input
+                  type="text"
+                  min={1}
+                  value={item.product.variants[0].price.toLocaleString("vi-VN")}
+                  onChange={(e) =>
+                    handleQuantityChange(item.id, Number(e.target.value))
+                  }
+                  className="w-23 h-8 text-center border border-grey-200 rounded-md py-1"
+                />
               </td>
-              <td className="py-3 px-4 text-right font-medium">
-                {(item.price * item.quantity).toLocaleString("vi-VN")}
+              <td className="py-3 px-4 text-left font-medium">
+                {(item.product.variants[0].price * item.quantity).toLocaleString("vi-VN")}
               </td>
               <td
                 className="text-center text-gray-400 cursor-pointer hover:text-red-500"

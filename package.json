@@ -12,19 +12,23 @@
   },
   "dependencies": {
     "@ladle/react": "^5.1.0",
-    "@reduxjs/toolkit": "^2.9.2",
+    "@reduxjs/toolkit": "^2.10.1",
     "@tailwindcss/postcss": "^4.1.16",
     "axios": "^1.13.1",
     "echarts": "^6.0.0",
+    "firebase": "^12.5.0",
     "framer-motion": "^12.23.24",
+    "json-server": "^1.0.0-beta.3",
     "lucide": "^0.552.0",
     "lucide-react": "^0.552.0",
     "next": "16.0.1",
     "postcss": "^8.5.6",
     "react": "19.2.0",
     "react-dom": "19.2.0",
+    "react-redux": "^9.2.0",
     "react-responsive": "^10.0.1",
-    "tailwindcss": "^4.1.16"
+    "tailwindcss": "^4.1.16",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",

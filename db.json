@@ -1,0 +1,413 @@
+{
+  "products": [
+    {
+      "id": "v1",
+      "groupId": "p1",
+      "groupName": "Áo thun nam mùa đông",
+      "productName": "M - Đen",
+      "sku": "ATNMB001",
+      "groupStatus": "Còn hàng",
+      "variantStatus": "Còn hàng",
+      "price": 500000
+    },
+    {
+      "id": "v2",
+      "groupId": "p1",
+      "groupName": "Áo thun nam mùa đông",
+      "productName": "L - Đen",
+      "sku": "ATNMB001",
+      "groupStatus": "Còn hàng",
+      "variantStatus": "Hết hàng",
+      "price": 500000
+    },
+    {
+      "id": "v3",
+      "groupId": "p1",
+      "groupName": "Áo thun nam mùa đông",
+      "productName": "S - Đen",
+      "sku": "ATNMB001",
+      "groupStatus": "Còn hàng",
+      "variantStatus": "Còn hàng",
+      "price": 500000
+    },
+    {
+      "id": "v4",
+      "groupId": "p1",
+      "groupName": "Áo thun nam mùa đông",
+      "productName": "XL - Đen",
+      "sku": "ATNMB001",
+      "groupStatus": "Còn hàng",
+      "variantStatus": "Hết hàng",
+      "price": 500000
+    },
+    {
+      "id": "v5",
+      "groupId": "p2",
+      "groupName": "Áo thun nam mùa hè",
+      "productName": "M - Trắng",
+      "sku": "ATNMH001",
+      "groupStatus": "Hết hàng",
+      "variantStatus": "Hết hàng",
+      "price": 450000
+    },
+    {
+      "id": "v6",
+      "groupId": "p2",
+      "groupName": "Áo thun nam mùa hè",
+      "productName": "L - Trắng",
+      "sku": "ATNMH001",
+      "groupStatus": "Hết hàng",
+      "variantStatus": "Hết hàng",
+      "price": 450000
+    },
+    {
+      "id": "v7",
+      "groupId": "p3",
+      "groupName": "Áo sơ mi nam công sở",
+      "productName": "S - Xanh",
+      "sku": "ASMN001",
+      "groupStatus": "Còn hàng",
+      "variantStatus": "Còn hàng",
+      "price": 600000
+    },
+    {
+      "id": "v8",
+      "groupId": "p3",
+      "groupName": "Áo sơ mi nam công sở",
+      "productName": "M - Xanh",
+      "sku": "ASMN001",
+      "groupStatus": "Còn hàng",
+      "variantStatus": "Còn hàng",
+      "price": 600000
+    },
+    {
+      "id": "v9",
+      "groupId": "p3",
+      "groupName": "Áo sơ mi nam công sở",
+      "productName": "L - Xanh",
+      "sku": "ASMN001",
+      "groupStatus": "Còn hàng",
+      "variantStatus": "Hết hàng",
+      "price": 600000
+    },
+    {
+      "id": "v10",
+      "groupId": "p4",
+      "groupName": "Áo khoác dù nam",
+      "productName": "M - Đen",
+      "sku": "AKDN001",
+      "groupStatus": "Còn hàng",
+      "variantStatus": "Còn hàng",
+      "price": 700000
+    },
+    {
+      "id": "v11",
+      "groupId": "p4",
+      "groupName": "Áo khoác dù nam",
+      "productName": "L - Đen",
+      "sku": "AKDN001",
+      "groupStatus": "Còn hàng",
+      "variantStatus": "Còn hàng",
+      "price": 700000
+    },
+    {
+      "id": "v12",
+      "groupId": "p5",
+      "groupName": "Áo khoác dù nữ",
+      "productName": "M - Đen",
+      "sku": "AKDN001",
+      "groupStatus": "Còn hàng",
+      "variantStatus": "Còn hàng",
+      "price": 700000
+    },
+    {
+      "id": "v13",
+      "groupId": "p5",
+      "groupName": "Áo khoác dù nữ",
+      "productName": "L - Đen",
+      "sku": "AKDN001",
+      "groupStatus": "Còn hàng",
+      "variantStatus": "Còn hàng",
+      "price": 700000
+    },
+    {
+      "id": "v14",
+      "groupId": "p6",
+      "groupName": "Áo T-shirt nam",
+      "productName": "M - Đen",
+      "sku": "AKDN001",
+      "groupStatus": "Còn hàng",
+      "variantStatus": "Còn hàng",
+      "price": 700000
+    },
+    {
+      "id": "v15",
+      "groupId": "p6",
+      "groupName": "Áo T-shirt nam",
+      "productName": "L - Đen",
+      "sku": "AKDN001",
+      "groupStatus": "Còn hàng",
+      "variantStatus": "Còn hàng",
+      "price": 700000
+    },
+    {
+      "id": "v16",
+      "groupId": "p7",
+      "groupName": "Áo khoác T-shirt nữ",
+      "productName": "M - Đen",
+      "sku": "AKDN001",
+      "groupStatus": "Còn hàng",
+      "variantStatus": "Còn hàng",
+      "price": 700000
+    },
+    {
+      "id": "v17",
+      "groupId": "p7",
+      "groupName": "Áo khoác T-shirt nữ",
+      "productName": "L - Đen",
+      "sku": "AKDN001",
+      "groupStatus": "Còn hàng",
+      "variantStatus": "Còn hàng",
+      "price": 700000
+    },
+    {
+      "id": "v18",
+      "groupId": "p8",
+      "groupName": "Quần nam",
+      "productName": "M - Đen",
+      "sku": "AKDN001",
+      "groupStatus": "Còn hàng",
+      "variantStatus": "Còn hàng",
+      "price": 700000
+    },
+    {
+      "id": "v19",
+      "groupId": "p8",
+      "groupName": "Quần nam",
+      "productName": "L - Đen",
+      "sku": "AKDN001",
+      "groupStatus": "Còn hàng",
+      "variantStatus": "Còn hàng",
+      "price": 700000
+    },
+    {
+      "id": "v20",
+      "groupId": "p4",
+      "groupName": "Quần nữ",
+      "productName": "M - Đen",
+      "sku": "AKDN001",
+      "groupStatus": "Còn hàng",
+      "variantStatus": "Còn hàng",
+      "price": 700000
+    },
+    {
+      "id": "v21",
+      "groupId": "p4",
+      "groupName": "Quần nữ",
+      "productName": "L - Đen",
+      "sku": "AKDN001",
+      "groupStatus": "Còn hàng",
+      "variantStatus": "Còn hàng",
+      "price": 700000
+    }
+  ],
+  "carts": [
+    {
+      "id": "3cc3",
+      "uid": "1234",
+      "product": {
+        "id": "v1",
+        "name": "Áo thun nam mùa đông",
+        "status": "Còn hàng",
+        "variants": [
+          {
+            "id": "v1",
+            "productName": "M - Đen",
+            "sku": "ATNMB001",
+            "variantStatus": "Còn hàng",
+            "price": 500000
+          }
+        ]
+      },
+      "quantity": 1
+    },
+    {
+      "id": "18fd",
+      "uid": "1234",
+      "product": {
+        "id": "v3",
+        "name": "Áo thun nam mùa đông",
+        "status": "Còn hàng",
+        "variants": [
+          {
+            "id": "v3",
+            "productName": "S - Đen",
+            "sku": "ATNMB001",
+            "variantStatus": "Còn hàng",
+            "price": 500000
+          }
+        ]
+      },
+      "quantity": 2
+    },
+    {
+      "id": "527d",
+      "uid": "1234",
+      "product": {
+        "id": "v10",
+        "name": "Áo khoác dù nam",
+        "status": "Còn hàng",
+        "variants": [
+          {
+            "id": "v10",
+            "productName": "M - Đen",
+            "sku": "AKDN001",
+            "variantStatus": "Còn hàng",
+            "price": 700000
+          }
+        ]
+      },
+      "quantity": 1
+    }
+  ],
+  "orders": [
+    {
+      "id": "19b4",
+      "uid": "1234",
+      "items": [
+        {
+          "id": "3cc3",
+          "uid": "1234",
+          "product": {
+            "id": "v1",
+            "name": "Áo thun nam mùa đông",
+            "status": "Còn hàng",
+            "variants": [
+              {
+                "id": "v1",
+                "productName": "M - Đen",
+                "sku": "ATNMB001",
+                "variantStatus": "Còn hàng",
+                "price": 500000
+              }
+            ]
+          },
+          "quantity": 1
+        },
+        {
+          "id": "18fd",
+          "uid": "1234",
+          "product": {
+            "id": "v3",
+            "name": "Áo thun nam mùa đông",
+            "status": "Còn hàng",
+            "variants": [
+              {
+                "id": "v3",
+                "productName": "S - Đen",
+                "sku": "ATNMB001",
+                "variantStatus": "Còn hàng",
+                "price": 500000
+              }
+            ]
+          },
+          "quantity": 2
+        },
+        {
+          "id": "527d",
+          "uid": "1234",
+          "product": {
+            "id": "v10",
+            "name": "Áo khoác dù nam",
+            "status": "Còn hàng",
+            "variants": [
+              {
+                "id": "v10",
+                "productName": "M - Đen",
+                "sku": "AKDN001",
+                "variantStatus": "Còn hàng",
+                "price": 700000
+              }
+            ]
+          },
+          "quantity": 1
+        }
+      ],
+      "customerName": "",
+      "phone": "0888390790",
+      "customerNote": "",
+      "channel": "online",
+      "shopName": "Shop A",
+      "orderNote": ""
+    },
+    {
+      "id": "2ad3",
+      "uid": "1234",
+      "items": [
+        {
+          "id": "3cc3",
+          "uid": "1234",
+          "product": {
+            "id": "v1",
+            "name": "Áo thun nam mùa đông",
+            "status": "Còn hàng",
+            "variants": [
+              {
+                "id": "v1",
+                "productName": "M - Đen",
+                "sku": "ATNMB001",
+                "variantStatus": "Còn hàng",
+                "price": 500000
+              }
+            ]
+          },
+          "quantity": 1
+        },
+        {
+          "id": "18fd",
+          "uid": "1234",
+          "product": {
+            "id": "v3",
+            "name": "Áo thun nam mùa đông",
+            "status": "Còn hàng",
+            "variants": [
+              {
+                "id": "v3",
+                "productName": "S - Đen",
+                "sku": "ATNMB001",
+                "variantStatus": "Còn hàng",
+                "price": 500000
+              }
+            ]
+          },
+          "quantity": 2
+        },
+        {
+          "id": "527d",
+          "uid": "1234",
+          "product": {
+            "id": "v10",
+            "name": "Áo khoác dù nam",
+            "status": "Còn hàng",
+            "variants": [
+              {
+                "id": "v10",
+                "productName": "M - Đen",
+                "sku": "AKDN001",
+                "variantStatus": "Còn hàng",
+                "price": 700000
+              }
+            ]
+          },
+          "quantity": 1
+        }
+      ],
+      "customerName": "Hahaha",
+      "phone": "0888390790",
+      "customerNote": "",
+      "channel": "online",
+      "shopName": "Shop A",
+      "orderNote": ""
+    }
+  ]
+}

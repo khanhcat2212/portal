@@ -1,5 +1,6 @@
 import React from "react";
 import clsx from "clsx";
+import Image from "next/image";
 
 interface StatisticCardProps {
   icon: string;
@@ -27,7 +28,7 @@ const StatisticCard: React.FC<StatisticCardProps> = ({
           iconBg
         )}
       >
-        <img src={icon} alt="icon" className="w-6 object-contain" />
+        <Image src={icon} width={36} height={0} alt="icon" className="w-6 h-auto object-contain" />
       </div>
     </div>
   );

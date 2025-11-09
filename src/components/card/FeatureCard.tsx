@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface FeatureCardProps {
@@ -16,10 +17,12 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       <div className="absolute inset-0  bg-primary-gradient z-0 h-127 w-87.5 rounded-2xl" />
 
       <div className="flex flex-col bg-white items-center z-10 w-86.5 h-120.5 rounded-2xl px-10 py-8">
-        <img
+        <Image
           src={image}
           alt={title}
-          className="h-20 object-cover mb-8"
+          width={0}
+          height={80}
+          className="h-20 w-auto object-cover mb-8"
         />
 
         <h3 className="font-semibold text-black text-[1.125rem] mb-6 text-center">{title}</h3>

@@ -1,6 +1,4 @@
 import { ChartColumn, ShoppingBag, ShoppingCart } from "lucide-react";
-import React from "react";
-
 export interface AdminNav {
   label: string;
   icon: typeof ChartColumn;
