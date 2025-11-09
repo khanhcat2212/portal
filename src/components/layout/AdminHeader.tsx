@@ -1,21 +1,22 @@
 import { ChevronDown, Menu, Settings } from "lucide-react";
 import React from "react";
 import Input from "@src/components/input/Input";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "@src/store/store";
+import { toggleSideBar } from "@src/store/slices/sidebarSlice";
+import Image from "next/image";
 
 const AdminHeader: React.FC = () => {
-  return (
-    <div className="h-17.5 flex w-screen">
-      <div className="w-63 bg-black-600 flex items-center justify-center">
-        <img
-          src="/logo.png"
-          alt="logo"
-          className="w-30.5 object-cover mb-2 mr-1"
-        />
-      </div>
+  const dispatch = useDispatch<AppDispatch>();
+  const handleClick = () => {
+    dispatch(toggleSideBar());
+  };
 
+  return (
+    <div className="h-17.5 flex w-full">
       <div className="flex flex-1 items-center justify-between bg-white px-6">
         <div className="flex items-center gap-4">
-          <Menu className="text-[.875rem] text-grey-900" />
+          <Menu onClick={handleClick} className="text-[.875rem] text-grey-900 cursor-pointer" />
           <div className="w-140.75">
             <Input variant="contained" placeholder="Search..." withIcon />
           </div>
@@ -23,9 +24,11 @@ const AdminHeader: React.FC = () => {
 
         <div className="flex items-center gap-2">
           <div className="h-9 w-9 rounded-full overflow-hidden">
-            <img
+            <Image
               src="https://www.svgrepo.com/show/382097/female-avatar-girl-face-woman-user-9.svg"
               alt="avatar"
+              width={36}
+              height={36}
               className="w-9 h-9 object-cover cursor-pointer"
             />
 

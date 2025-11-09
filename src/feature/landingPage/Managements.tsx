@@ -1,5 +1,6 @@
 import ManagementCard from "@src/components/card/ManagementCard";
 import { managements } from "@src/constants/managements";
+import Image from "next/image";
 import React from "react";
 
 const Managements: React.FC = () => {
@@ -28,10 +29,12 @@ const Managements: React.FC = () => {
         </div>
 
         <div className="w-full md:w-150 flex justify-center mb-10 md:mb-0">
-          <img
+          <Image
             src="/categories/banner_1.svg"
             alt="banner_1"
-            className="w-62.5 sm:w-100 md:w-150 object-contain"
+            width={250}
+            height={0}
+            className="sm:w-100 md:w-150 h-auto object-contain"
           />
         </div>
       </div>

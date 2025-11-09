@@ -1,36 +1,37 @@
 import React from "react";
 import clsx from "clsx";
+import Image from "next/image";
 
-interface FeatureCardProps {
-  icon: React.ReactNode;
+interface StatisticCardProps {
+  icon: string;
   iconBg: string;
-  iconColor: string;
   title: string;
   value: string;
 }
 
-const FeatureCard: React.FC<FeatureCardProps> = ({
+const StatisticCard: React.FC<StatisticCardProps> = ({
   icon,
   iconBg,
-  iconColor,
   title,
   value,
 }) => {
   return (
-    <div className="flex items-center justify-between py-16 h-32.75 w-96.75 bg-white px-7.5 rounded-sm shadow-2">
-        <div className="flex flex-col gap-3">
-            <p className="text-[1rem] font-bold">{title}</p>
-            <p className="text-[1.75rem]">{value}</p>
-        </div>
+    <div className="flex items-center justify-between py-8 h-28 w-69 bg-white px-6 rounded-sm shadow-sm hover:shadow-md hover:scale-[1.03] transition-transform duration-300 ease-in-out cursor-pointer">
+      <div className="flex flex-col gap-2">
+        <p className="text-[.9375rem] font-bold">{title}</p>
+        <p className="text-[1.375rem] font-medium">{value}</p>
+      </div>
 
-        <div className={clsx(
-            "flex items-center justify-center w-15 h-15 rounded-md",
-            iconBg
-        )}>
-            <div className={clsx("w-6 h-6", iconColor)}>{icon}</div>
-        </div>
+      <div
+        className={clsx(
+          "flex items-center justify-center w-12 h-12 rounded-md",
+          iconBg
+        )}
+      >
+        <Image src={icon} width={36} height={0} alt="icon" className="w-6 h-auto object-contain" />
+      </div>
     </div>
   );
 };
 
-export default FeatureCard;
+export default StatisticCard;

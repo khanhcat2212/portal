@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface CustomerCardProps {
@@ -7,7 +8,7 @@ interface CustomerCardProps {
 const CustomerCard: React.FC<CustomerCardProps> = ({ logo }) => {
   return (
     <div className="flex flex-col w-[90%] md:w-135 h-full md:h-63 rounded-2xl bg-grey-300 py-8 px-12 justify-center items-center space-y-6">
-      <img src={logo} alt="logo" className="h-9 object-cover justify-center" />
+      <Image src={logo} alt="logo" height={36} width={150} className="h-9 w-auto object-cover justify-center" />
 
       <p className="text-[1rem] text-grey-900 text-center leading-5 mt-2">
         Est tation latine aliquip id, mea ad tale illud definitiones. Periculis

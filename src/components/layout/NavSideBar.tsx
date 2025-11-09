@@ -1,15 +1,44 @@
 import { adminNavs } from "@src/constants/adminNavs";
-import React, { useState } from "react";
+import { setActiveNav } from "@src/store/slices/navSlice";
+import { AppDispatch, RootState } from "@src/store/store";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 const NavSideBar: React.FC = () => {
-  const [activePath, setActivePath] = useState<string | null>("/admin");
-  const handleClick = (path: string) => setActivePath(path);
+  const router = useRouter()
+
+  const dispatch = useDispatch<AppDispatch>();
+  const activePath = useSelector((state: RootState) => state.navs.activePath);
+  const isOpenSideBar = useSelector(
+    (state: RootState) => state.sidebar.isOpenSideBar
+  );
+
+
+  if (!isOpenSideBar) return null;
+  
+  const handleClick = (path: string) => {
+    dispatch(setActiveNav(path));
+    router.push(path);
+  };
+
 
   return (
     <div
       className="w-63 bg-black-600"
-      style={{ height: "calc(100vh - 4.375rem)" }}
+    // style={{ height: "calc(100vh - 4.375rem)" }}
     >
+      <div className="w-63 bg-black-600 flex items-center justify-center h-17.5">
+        <Image
+          src="/logo.png"
+          alt="logo"
+          width={112}
+          height={0}
+          className="h-auto object-cover mb-2 mr-1 cursor-pointer"
+          onClick={() => router.push('/')}
+        />
+      </div>
       {adminNavs.map((nav) => {
         const isActive = activePath === nav.path;
         return (

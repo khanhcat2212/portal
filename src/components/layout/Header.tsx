@@ -1,11 +1,18 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { landingPageNavs } from "@src/constants/landingPageNavs";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Button from "@src/components/button/Button";
 import { Menu } from "lucide-react";
+import Image from "next/image";
+import { loginWithGoogle } from "@src/firebase/authService";
+import { useRouter } from "next/navigation";
 
 const Header: React.FC = () => {
   const [activeRef, setActiveRef] = useState<string>("overview");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [user, setUser] = useState<any>(null);
+
+  const router = useRouter()
 
 
   const handleScroll = (ref: string) => {
@@ -17,18 +24,32 @@ const Header: React.FC = () => {
     }
   };
 
+  const handleLogin = async () => {
+    try {
+      const loggedUser = await loginWithGoogle();
+      setUser(loggedUser);
+      console.log("User logged in:", loggedUser);
+      router.push('/admin')
+    } catch (error) {
+      alert("Đăng nhập thất bại!");
+      console.error("Error: ", error)
+    }
+  };
+
   return (
     <div className="sticky top-0 z-10 bg-white">
       <div className="sticky top-0 z-10 bg-white flex items-center justify-center h-22 w-screen">
         <div className="flex items-center justify-between px-4 py-4 md:py-4 max-w-300 mx-auto w-full">
           <div className="flex items-center gap-7">
-            <img
+            <Image
               src="/logo.png"
               alt="logo"
-              className="w-30.5 object-cover mb-2 mr-1"
+              width={112}
+              height={27}
+              className="object-cover mb-2 mr-1"
             />
 
-            <nav className="hidden md:flex items-center gap-7">
+            <nav className="hidden md:flex items-center gap-7 whitespace-nowrap">
               {landingPageNavs.map((nav) => (
                 <button
                   key={nav.ref}
@@ -50,7 +71,7 @@ const Header: React.FC = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-8">
-            <div className="text-[1.125rem] font-semibold cursor-pointer">
+            <div onClick={handleLogin} className="text-[1.125rem] font-semibold cursor-pointer whitespace-nowrap">
               Đăng nhập
             </div>
             <Button variant="outline" size="md">

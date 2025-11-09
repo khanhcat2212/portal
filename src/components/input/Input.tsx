@@ -23,7 +23,7 @@ function Input({
       "bg-grey-300 text-[.8125rem] text-grey-900 h-[2.3125rem] placeholder:text-grey-900 h-[2.3125rem]",
     outline:
       "border border-grey-900 text-grey-900 h-[2.3125rem] placeholder:text-grey-900 h-[2.3125rem]",
-    form: "border border-grey-600 text-black h-10 placeholder:text-grey-500 bg-white-500 h-10 px-5",
+    form: "border border-grey-600 text-black h-10 placeholder:text-grey-300 bg-white-500 h-10 px-5",
   };
 
   return (
